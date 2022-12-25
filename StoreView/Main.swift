@@ -9,11 +9,12 @@ import SwiftUI
 
 struct Main: View {
     
-    @State private var show  = true
+    @State private var show  = false
     @State private var index = 0
     
     @State private var rotation = 1.0
-    @State private var animationBack = true
+    @State private var animationBackLight = 1.0
+
     
     var body: some View {
         ZStack {
@@ -22,42 +23,75 @@ struct Main: View {
                            endPoint: .topTrailing)
             .blur(radius: 2, opaque: false)
             .ignoresSafeArea()
+            
+            ZStack {
+                
+                Image("Line")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 220)
+                    .shadow(color: .pink, radius: 30, x: 5, y: 5)
+                    .rotationEffect(.degrees(6))
+                    .opacity(animationBackLight)
+                    .onAppear {
+                        let baseAnimation = Animation.interpolatingSpring(stiffness: 10, damping: 15)
+                        let rapited = baseAnimation
+                            .repeatForever(autoreverses: true)
+                        return withAnimation(rapited) { self.animationBackLight = 0.0 }
+                    }
+                    .offset(x: 65, y: 230)
+                
+                Image("Line")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 220)
+                    .shadow(color: .pink, radius: 30, x: 5, y: 5)
+                    .rotationEffect(.degrees(-70))
+                    .opacity(animationBackLight)
+                    .onAppear {
+                        let baseAnimation = Animation.interpolatingSpring(stiffness: 10, damping: 15)
+                        let rapited = baseAnimation
+                            .repeatForever(autoreverses: true)
+                        return withAnimation(rapited) { self.animationBackLight = 0.0 }
+                    }
+                    .offset(x: 75, y: 220)
+                
+                Image("Xgame")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 160, height: 160)
+                    .rotationEffect(.degrees(-20))
+                    .offset(x: 90, y: 240)
+            }
+            
             HStack  {
                 VStack (alignment: .leading) {
                     VStack {
-                        Image("Person")
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(Circle())
-                            .padding(.all, 25)
-                            
-                            .overlay(
-                                Image("Circle")
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .rotationEffect(.degrees(rotation))
-                                    .animation(.easeOut(duration: ( 9 )).delay(0.2), value: rotation)
-                                    .task {
-                                        if self.animationBack == true {
-                                            self.rotation += 360
-                                                
-                                        }
-                                    }
-                            )
+                            Image("Person")
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .padding(.all, 25)
+                                .overlay(
+                                    Image("Circle")
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .shadow(color: .pink, radius: 2, x: 2, y: 0)
+                                        .shadow(color: .blue, radius: 2, x: 3, y: 0)
+                                        .rotationEffect(.degrees(rotation))
+                                        .animation(.easeOut(duration: ( 15 )).delay(0.1), value: rotation)
+                                        .onAppear { repeatAnimationPerson() } )
                     }
-
-                   
-                    
                     Text("Hello,")
                         .font(.system(size: 33) .monospaced() .bold())
                         .foregroundColor(Color("color4"))
                         .shadow(color: .red, radius: 3, x: 1, y: 1)
                         .shadow(color: .blue, radius: 4, x: -1, y: -1)
-                        .onTapGesture {
-                            self.rotation += 360
-                        }
 
                     Text("Alex")
                         .font(.system(size: 27) .monospaced() .bold())
@@ -67,7 +101,7 @@ struct Main: View {
                     
                     Button {
                         self.index = 0
-                        withAnimation{ self.show.toggle() }
+                        withAnimation{ self.show = true }
                     } label: {
                         HStack {
                             Image("Add")
@@ -89,7 +123,7 @@ struct Main: View {
                     
                     Button {
                         self.index = 1
-                        withAnimation{ self.show.toggle() }
+                        withAnimation{ self.show = true }
                     } label: {
                         HStack {
                             Image("Basket")
@@ -111,7 +145,7 @@ struct Main: View {
                     
                     Button {
                         self.index = 2
-                        withAnimation{ self.show.toggle() }
+                        withAnimation{ self.show = true }
                     } label: {
                         HStack {
                             Image("Favorite")
@@ -133,7 +167,7 @@ struct Main: View {
                     
                     Button {
                         self.index = 3
-                        withAnimation{ self.show.toggle() }
+                        withAnimation{ self.show = true }
                     } label: {
                         HStack {
                             Image("Orders")
@@ -178,11 +212,12 @@ struct Main: View {
                 }
                 .padding()
             }
+
             VStack {
                 GeometryReader{ _ in
                     HStack {
                         Button {
-                            withAnimation { self.show.toggle() }
+                            withAnimation { self.show = false }
                         } label: {
                             Image(systemName: "arrowshape.turn.up.backward.2")
                                 .foregroundColor(Color("color1"))
@@ -191,10 +226,14 @@ struct Main: View {
                         Text(self.index == 0 ? "Add" : (self.index == 1 ? "Basket" : (self.index == 2 ? "Favorite" : "Orders" )))
                             .font(.system(size: 21))
                             .foregroundColor(Color("color1"))
+                            .onTapGesture {
+                                withAnimation { self.show = false }
+                            }
                     }
                     .padding()
                     .padding(.top)
-                    .opacity(self.show ? 0 : 1)
+                    .offset(y: 20)
+                    .opacity(self.show ? 1 : 0)
                     
                     VStack {
                         
@@ -208,32 +247,42 @@ struct Main: View {
                             Orders()
                         }
                     }
-                    .opacity(self.show ? 0 : 1)
+                    .opacity(self.show ? 1 : 0 )
                 }
             }
             .background(
                 LinearGradient(colors: [Color("color2"), Color("color3"), Color("color2"), Color("color3")],
                                startPoint: .bottomLeading,
                                endPoint: .topTrailing)
-                .blur(radius: 2, opaque: false)
+                .blur(radius: 2, opaque: false) )
                
-            )
-            .cornerRadius(self.show ? 50 : 0)
-            .scaleEffect(self.show ? 0.9 : 1)
-            .offset(x: self.show ? 240 : 0, y: self.show ? 35 : 0)
-            .rotationEffect(.init(degrees: self.show ? -5 : 0))
-            .opacity(self.show ? 0.6 : 1)
+            .cornerRadius(self.show ? 0 : 50)
+            .scaleEffect(self.show ? 1 : 0.9)
+            .offset(x: self.show ? 0 : 240, y: self.show ? 0 : 35 )
+            .rotationEffect(.init(degrees: self.show ? 0 : -5))
+            .opacity(self.show ? 1 : 0.6)
         }
         .ignoresSafeArea()
         .gesture(DragGesture(minimumDistance: 40)
             .onEnded { _ in
                 withAnimation {
-                    if self.show == false {
-                        self.show = true
+                    if self.show == true {
+                        self.show = false
                     }
                 }
             }
         )
+    }
+    func repeatAnimationPerson() {
+        if  self.rotation == 1.0 {
+            self.rotation += 360
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15.1) {
+                self.rotation -= 360
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+            repeatAnimationPerson()
+        }
     }
 }
 //                   📌
@@ -254,7 +303,6 @@ struct Add: View {
                 .resizable()
                 .scaledToFit()
             Spacer()
-            
         }
     }
 }
