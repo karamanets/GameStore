@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB413E12959B437009B0D13 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E02959B437009B0D13 /* Add.swift */; };
+		2CB413E32959B485009B0D13 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E22959B485009B0D13 /* Basket.swift */; };
+		2CB413E52959B4A6009B0D13 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E42959B4A6009B0D13 /* Favorite.swift */; };
+		2CB413E72959B4CB009B0D13 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E62959B4CB009B0D13 /* Orders.swift */; };
+		2CB413EA2959C0D8009B0D13 /* MainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E92959C0D8009B0D13 /* MainBackground.swift */; };
+		2CB413EC2959C39D009B0D13 /* MainButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */; };
 		2CBB25892955F1570013DD60 /* StoreViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB25882955F1570013DD60 /* StoreViewApp.swift */; };
 		2CBB258B2955F1570013DD60 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB258A2955F1570013DD60 /* Main.swift */; };
 		2CBB258D2955F1590013DD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBB258C2955F1590013DD60 /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB413E02959B437009B0D13 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		2CB413E22959B485009B0D13 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		2CB413E42959B4A6009B0D13 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		2CB413E62959B4CB009B0D13 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		2CB413E92959C0D8009B0D13 /* MainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackground.swift; sourceTree = "<group>"; };
+		2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonAnimation.swift; sourceTree = "<group>"; };
 		2CBB25852955F1570013DD60 /* StoreView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBB25882955F1570013DD60 /* StoreViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewApp.swift; sourceTree = "<group>"; };
 		2CBB258A2955F1570013DD60 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -32,6 +44,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB413E82959B4FD009B0D13 /* All view */ = {
+			isa = PBXGroup;
+			children = (
+				2CB413E02959B437009B0D13 /* Add.swift */,
+				2CB413E22959B485009B0D13 /* Basket.swift */,
+				2CB413E42959B4A6009B0D13 /* Favorite.swift */,
+				2CB413E62959B4CB009B0D13 /* Orders.swift */,
+			);
+			path = "All view";
+			sourceTree = "<group>";
+		};
 		2CBB257C2955F1570013DD60 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +76,9 @@
 			children = (
 				2CBB25882955F1570013DD60 /* StoreViewApp.swift */,
 				2CBB258A2955F1570013DD60 /* Main.swift */,
+				2CB413E92959C0D8009B0D13 /* MainBackground.swift */,
+				2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */,
+				2CB413E82959B4FD009B0D13 /* All view */,
 				2CBB258C2955F1590013DD60 /* Assets.xcassets */,
 				2CBB258E2955F1590013DD60 /* Preview Content */,
 			);
@@ -137,6 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB413E72959B4CB009B0D13 /* Orders.swift in Sources */,
+				2CB413E52959B4A6009B0D13 /* Favorite.swift in Sources */,
+				2CB413E12959B437009B0D13 /* Add.swift in Sources */,
+				2CB413E32959B485009B0D13 /* Basket.swift in Sources */,
+				2CB413EC2959C39D009B0D13 /* MainButtonAnimation.swift in Sources */,
+				2CB413EA2959C0D8009B0D13 /* MainBackground.swift in Sources */,
 				2CBB258B2955F1570013DD60 /* Main.swift in Sources */,
 				2CBB25892955F1570013DD60 /* StoreViewApp.swift in Sources */,
 			);
