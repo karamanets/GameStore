@@ -11,7 +11,7 @@ import SwiftUI
 struct StoreViewApp: App {
     var body: some Scene {
         WindowGroup {
-            Main()
+            MainView()
         }
     }
 }
