@@ -73,13 +73,13 @@ struct MainButtonsAnimations: View {
                     withAnimation{ self.show = true }
                 } label: {
                     HStack {
-                        Image("Basket")
+                        Image("Cart")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 40, height: 40)
                             .colorMultiply(Color("color5"))
                         
-                        Text("Basket")
+                        Text("Cart")
                             .font(.system(size: 25) .bold())
                             .foregroundColor(self.index == 1 ? Color.white : Color("color5"))
                             .shadow(color: .black, radius: 1, x: 3, y: 3)
