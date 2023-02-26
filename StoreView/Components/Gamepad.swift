@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GamepadWithAnimation: View {
     
-    @Binding var animationBackLight: Double
+    @State private var animationBackLight = 1.0
     
     var body: some View {
         ZStack {
@@ -60,6 +60,6 @@ struct GamepadWithAnimation: View {
 //                   🔱
 struct GamepadWithAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        GamepadWithAnimation(animationBackLight: .constant(0.0))
+        GamepadWithAnimation()
     }
 }

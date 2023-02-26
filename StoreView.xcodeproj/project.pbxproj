@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2C42556F299BDE8A004F9D28 /* Gamepad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42556E299BDE8A004F9D28 /* Gamepad.swift */; };
+		2C4B109229ABA7C90003E80F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B109129ABA7C90003E80F /* MainViewModel.swift */; };
 		2CB413E12959B437009B0D13 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E02959B437009B0D13 /* AddView.swift */; };
 		2CB413E32959B485009B0D13 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E22959B485009B0D13 /* CartView.swift */; };
 		2CB413E52959B4A6009B0D13 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E42959B4A6009B0D13 /* FavoritesView.swift */; };
 		2CB413E72959B4CB009B0D13 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E62959B4CB009B0D13 /* OrdersView.swift */; };
 		2CB413EA2959C0D8009B0D13 /* MainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413E92959C0D8009B0D13 /* MainBackground.swift */; };
-		2CB413EC2959C39D009B0D13 /* MainButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */; };
+		2CB413EC2959C39D009B0D13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB413EB2959C39D009B0D13 /* MainView.swift */; };
 		2CBB25892955F1570013DD60 /* StoreViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB25882955F1570013DD60 /* StoreViewApp.swift */; };
-		2CBB258B2955F1570013DD60 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB258A2955F1570013DD60 /* MainView.swift */; };
+		2CBB258B2955F1570013DD60 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB258A2955F1570013DD60 /* StoreView.swift */; };
 		2CBB258D2955F1590013DD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBB258C2955F1590013DD60 /* Assets.xcassets */; };
 		2CBB25902955F1590013DD60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBB258F2955F1590013DD60 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -23,15 +24,16 @@
 /* Begin PBXFileReference section */
 		2C42556E299BDE8A004F9D28 /* Gamepad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamepad.swift; sourceTree = "<group>"; };
 		2C425570299BE068004F9D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2C4B109129ABA7C90003E80F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2CB413E02959B437009B0D13 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2CB413E22959B485009B0D13 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		2CB413E42959B4A6009B0D13 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2CB413E62959B4CB009B0D13 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 		2CB413E92959C0D8009B0D13 /* MainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackground.swift; sourceTree = "<group>"; };
-		2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonAnimation.swift; sourceTree = "<group>"; };
+		2CB413EB2959C39D009B0D13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2CBB25852955F1570013DD60 /* StoreView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBB25882955F1570013DD60 /* StoreViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewApp.swift; sourceTree = "<group>"; };
-		2CBB258A2955F1570013DD60 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2CBB258A2955F1570013DD60 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		2CBB258C2955F1590013DD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CBB258F2955F1590013DD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,16 +53,24 @@
 			isa = PBXGroup;
 			children = (
 				2CB413E92959C0D8009B0D13 /* MainBackground.swift */,
-				2CB413EB2959C39D009B0D13 /* MainButtonAnimation.swift */,
 				2C42556E299BDE8A004F9D28 /* Gamepad.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
+		2C4B109329ABA7D40003E80F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B109129ABA7C90003E80F /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2CB413E82959B4FD009B0D13 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2CBB258A2955F1570013DD60 /* MainView.swift */,
+				2CBB258A2955F1570013DD60 /* StoreView.swift */,
+				2CB413EB2959C39D009B0D13 /* MainView.swift */,
 				2CB413E02959B437009B0D13 /* AddView.swift */,
 				2CB413E22959B485009B0D13 /* CartView.swift */,
 				2CB413E42959B4A6009B0D13 /* FavoritesView.swift */,
@@ -90,6 +100,7 @@
 			children = (
 				2CBB25882955F1570013DD60 /* StoreViewApp.swift */,
 				2CB413E82959B4FD009B0D13 /* View */,
+				2C4B109329ABA7D40003E80F /* ViewModel */,
 				2C42556B299BDDD5004F9D28 /* Components */,
 				2CBB258E2955F1590013DD60 /* Preview Content */,
 				2CBB258C2955F1590013DD60 /* Assets.xcassets */,
@@ -181,9 +192,10 @@
 				2CB413E12959B437009B0D13 /* AddView.swift in Sources */,
 				2CB413E32959B485009B0D13 /* CartView.swift in Sources */,
 				2C42556F299BDE8A004F9D28 /* Gamepad.swift in Sources */,
-				2CB413EC2959C39D009B0D13 /* MainButtonAnimation.swift in Sources */,
+				2C4B109229ABA7C90003E80F /* MainViewModel.swift in Sources */,
+				2CB413EC2959C39D009B0D13 /* MainView.swift in Sources */,
 				2CB413EA2959C0D8009B0D13 /* MainBackground.swift in Sources */,
-				2CBB258B2955F1570013DD60 /* MainView.swift in Sources */,
+				2CBB258B2955F1570013DD60 /* StoreView.swift in Sources */,
 				2CBB25892955F1570013DD60 /* StoreViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
