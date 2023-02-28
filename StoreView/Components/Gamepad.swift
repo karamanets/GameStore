@@ -23,12 +23,6 @@ struct GamepadWithAnimation: View {
                 .shadow(color: .pink, radius: 30, x: 5, y: 5)
                 .rotationEffect(.degrees(6))
                 .opacity(animationBackLight)
-                .onAppear {
-                    let baseAnimation = Animation.interpolatingSpring(stiffness: 10, damping: 15)
-                    let rapped = baseAnimation
-                        .repeatForever(autoreverses: true)
-                    return withAnimation(rapped) { self.animationBackLight = 0.0 }
-                }
                 .offset(x: 65, y: 230)
             
             Image("Line")
@@ -40,10 +34,9 @@ struct GamepadWithAnimation: View {
                 .rotationEffect(.degrees(-70))
                 .opacity(animationBackLight)
                 .onAppear {
-                    let baseAnimation = Animation.interpolatingSpring(stiffness: 10, damping: 15)
-                    let rapped = baseAnimation
-                        .repeatForever(autoreverses: true)
-                    return withAnimation(rapped) { self.animationBackLight = 0.0 }
+                    withAnimation(.interpolatingSpring(stiffness: 10, damping: 15).repeatForever()) {
+                        self.animationBackLight = 0.0
+                    }
                 }
                 .offset(x: 75, y: 220)
             
