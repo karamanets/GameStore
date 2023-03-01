@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GamepadWithAnimation: View {
     
-    @State private var animationBackLight = 1.0
+    @State private var animationBackLight = 0.0
     
     var body: some View {
         ZStack {
@@ -34,8 +34,9 @@ struct GamepadWithAnimation: View {
                 .rotationEffect(.degrees(-70))
                 .opacity(animationBackLight)
                 .onAppear {
-                    withAnimation(.interpolatingSpring(stiffness: 10, damping: 15).repeatForever()) {
-                        self.animationBackLight = 0.0
+                    withAnimation(
+                        .interpolatingSpring(stiffness: 10, damping: 15).repeatForever()) {
+                        self.animationBackLight = 1.0
                     }
                 }
                 .offset(x: 75, y: 220)

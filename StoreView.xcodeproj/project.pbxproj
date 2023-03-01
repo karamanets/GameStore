@@ -19,6 +19,8 @@
 		2CBB258B2955F1570013DD60 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB258A2955F1570013DD60 /* StoreView.swift */; };
 		2CBB258D2955F1590013DD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBB258C2955F1590013DD60 /* Assets.xcassets */; };
 		2CBB25902955F1590013DD60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBB258F2955F1590013DD60 /* Preview Assets.xcassets */; };
+		2CC9F79129AE5F20001B609A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9F79029AE5F20001B609A /* BackButton.swift */; };
+		2CC9F79329AE6C7C001B609A /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9F79229AE6C7C001B609A /* Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2CBB258A2955F1570013DD60 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		2CBB258C2955F1590013DD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CBB258F2955F1590013DD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CC9F79029AE5F20001B609A /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		2CC9F79229AE6C7C001B609A /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		2C42556B299BDDD5004F9D28 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2CC9F79229AE6C7C001B609A /* Views.swift */,
 				2CB413E92959C0D8009B0D13 /* MainBackground.swift */,
 				2C42556E299BDE8A004F9D28 /* Gamepad.swift */,
+				2CC9F79029AE5F20001B609A /* BackButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,11 +195,13 @@
 			files = (
 				2CB413E72959B4CB009B0D13 /* OrdersView.swift in Sources */,
 				2CB413E52959B4A6009B0D13 /* FavoritesView.swift in Sources */,
+				2CC9F79129AE5F20001B609A /* BackButton.swift in Sources */,
 				2CB413E12959B437009B0D13 /* AddView.swift in Sources */,
 				2CB413E32959B485009B0D13 /* CartView.swift in Sources */,
 				2C42556F299BDE8A004F9D28 /* Gamepad.swift in Sources */,
 				2C4B109229ABA7C90003E80F /* MainViewModel.swift in Sources */,
 				2CB413EC2959C39D009B0D13 /* MainView.swift in Sources */,
+				2CC9F79329AE6C7C001B609A /* Views.swift in Sources */,
 				2CB413EA2959C0D8009B0D13 /* MainBackground.swift in Sources */,
 				2CBB258B2955F1570013DD60 /* StoreView.swift in Sources */,
 				2CBB25892955F1570013DD60 /* StoreViewApp.swift in Sources */,

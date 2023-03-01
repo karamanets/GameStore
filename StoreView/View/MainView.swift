@@ -29,8 +29,11 @@ struct MainView: View {
                                 .shadow(color: .pink, radius: 2, x: 2, y: 0)
                                 .shadow(color: .blue, radius: 2, x: 3, y: 0)
                                 .rotationEffect(.degrees(vm.rotation))
-                                .animation(.easeOut(duration: ( 15 )).delay(0.1), value: vm.rotation)
-                                .onAppear { vm.repeatAnimationPerson() } )
+                                .onAppear {
+                                    withAnimation(.easeOut(duration: ( 10 )).repeatForever()) {
+                                        vm.rotation = 360
+                                    }
+                                })
                 }
                 Text("Hello,")
                     .font(.system(size: 33) .monospaced() .bold())
@@ -46,7 +49,7 @@ struct MainView: View {
                 
                 Button {
                     vm.index = 0
-                    withAnimation{ vm.show = true }
+                    withAnimation(.linear) { vm.show = true }
                 } label: {
                     HStack {
                         Image("Add")
@@ -68,7 +71,7 @@ struct MainView: View {
                 
                 Button {
                     vm.index = 1
-                    withAnimation{vm.show = true }
+                    withAnimation(.linear) {vm.show = true }
                 } label: {
                     HStack {
                         Image("Cart")
@@ -90,7 +93,7 @@ struct MainView: View {
                 
                 Button {
                     vm.index = 2
-                    withAnimation{ vm.show = true }
+                    withAnimation(.linear) { vm.show = true }
                 } label: {
                     HStack {
                         Image("Favorite")
@@ -112,7 +115,7 @@ struct MainView: View {
                 
                 Button {
                     vm.index = 3
-                    withAnimation{ vm.show = true }
+                    withAnimation(.linear) { vm.show = true }
                 } label: {
                     HStack {
                         Image("Orders")

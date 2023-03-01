@@ -14,21 +14,9 @@ class MainViewModel: ObservableObject {
     @Published var index   : Int
     @Published var show    : Bool
     
-    init(rotation: Double, index: Int, show: Bool) {
+    init(rotation: Double = 1.0, index: Int = 0, show: Bool = false) {
         self.rotation = rotation
         self.index = index
         self.show = show
-    }
-    
-    func repeatAnimationPerson() {
-        if  self.rotation == 1.0 {
-            self.rotation += 360
-            DispatchQueue.main.asyncAfter(deadline: .now() + 15.1) {
-                self.rotation -= 360
-            }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
-            self.repeatAnimationPerson()
-        }
     }
 }
