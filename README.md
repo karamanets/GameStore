@@ -59,7 +59,12 @@ ____
   
   <!--- Screens --->
 <img src="https://github.com/karamanets/StoreView/blob/main/icons/screen1.png" width="150" height="300">  <img src="https://github.com/karamanets/StoreView/blob/main/icons/screen2.png" width="150" height="300">   <img src="https://github.com/karamanets/StoreView/blob/main/icons/screen3.png" width="150" height="300">  <img src="https://github.com/karamanets/StoreView/blob/main/icons/screen4.png" width="150" height="300">  <img src="https://github.com/karamanets/StoreView/blob/main/icons/Screen5.png" width="150" height="300">
-  
-  
-  
+
 ____
+
+
+<h5 align="left">
+ 
+<!--- Download --->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=A0140C&width=435&lines=Download+the+repository)](https://git.io/typing-svg)  
+[Click here](https://github.com/karamanets/StoreView/blob/main/icons/Download.md)
