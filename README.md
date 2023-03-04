@@ -12,7 +12,7 @@ ____
   
   
 <!--- GIF iPnone ---> 
-<p><img align="right" src="https://github.com/karamanets/StoreView/blob/main/icons/GIF.gif" width="300" height="600" /></p>
+<p><img align="right" src="https://github.com/karamanets/StoreView/blob/main/icons/store.gif" width="300" height="600" /></p>
   
   
 <!--- Tag header --->
