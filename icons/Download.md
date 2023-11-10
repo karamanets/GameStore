@@ -4,4 +4,4 @@ To upload a project
 
 2) Navigate to the folder where you want to upload the project
 
-3) Execute the command --->     git clone https://github.com/karamanets/StoreView.git
+3) Execute the command --->     git clone https://github.com/karamanets/GameStore.git
